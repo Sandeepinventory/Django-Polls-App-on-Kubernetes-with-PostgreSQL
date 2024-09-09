@@ -73,6 +73,7 @@ COPY . /app/
 WORKDIR /app/django-polls
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
 by running manage.py with runserver and port 8000 this is my output app results and polls which i created
+![image](https://github.com/user-attachments/assets/3cf09d1d-0c37-4103-98da-22a06db5ea03)
 
 
 
