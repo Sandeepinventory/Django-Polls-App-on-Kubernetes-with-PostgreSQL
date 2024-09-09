@@ -49,6 +49,7 @@ for that cloned django app from git hub
 #git clone https://ashishbat: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@github.com/do-  community/django-polls
 and after that i need to Update Django settings.py to use PostgreSQL
 #cd django-polls/mysite/settings.py
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -59,9 +60,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-this need to be added in my django app so that this app will use postgres as database 
-pollsdb 
-is the database name which I created from ec2 console 
+this need to be added in my django app so that this app will use postgres as database pollsdb is the database name which I created from ec2 console 
+
 Created Dockerfile: Wrote a Dockerfile for my Django app
 dockerfile
 FROM python:3.9
@@ -76,15 +76,11 @@ by running manage.py with runserver and port 8000 this is my output app results 
 
 
 
-
-
-
-
-
 After that Build and Pushed the Docker Image to ECR: Created an ECR repository, tagged image, and pushed it:
 #aws ecr create-repository --repository-name polls-app
 #docker tag polls-app:latest 891377347126.dkr.ecr.us-east-2.amazonaws.com/polls-app:latest
 #docker push 891377347126.dkr.ecr.us-east-2.amazonaws.com/polls-app:latest
+
 Deployd the App on EKS: Created deployment.yaml and service.yaml for the Django app
 deployment.yaml
 kind: Deployment
@@ -159,7 +155,6 @@ Access the Django App: Open your browser and navigate to:
 Polls page: http://<EC2-public-ip>:30001/
 Admin page: http://<EC2-public-ip>:30001/admin/
 
-prometheus
 
 
 
