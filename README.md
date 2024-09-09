@@ -74,6 +74,10 @@ WORKDIR /app/django-polls
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
 by running manage.py with runserver and port 8000 this is my output app results and polls which i created
 ![image](https://github.com/user-attachments/assets/3cf09d1d-0c37-4103-98da-22a06db5ea03)
+![image](https://github.com/user-attachments/assets/ebc30eb1-ad27-40d6-8bd2-03fc8ab7cf46)
+![image](https://github.com/user-attachments/assets/602b5fed-49e5-4410-89d9-ba580bb197ca)
+![image](https://github.com/user-attachments/assets/0bcd7a0a-ce9a-49ff-827d-fc88829a083c)
+![image](https://github.com/user-attachments/assets/f1175fba-7762-453b-a67a-0836d1c075fc)
 
 
 
@@ -156,6 +160,8 @@ Access the Django App: Open your browser and navigate to:
 Polls page: http://<EC2-public-ip>:30001/
 Admin page: http://<EC2-public-ip>:30001/admin/
 
+Prometheus
+![image](https://github.com/user-attachments/assets/6646ddd5-febc-47bf-8f30-46faf5349343)
 
 
 
