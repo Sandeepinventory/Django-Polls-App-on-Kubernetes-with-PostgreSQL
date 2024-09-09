@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: polls-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: polls
+  template:
+    metadata:
+      labels:
+        app: polls
+    spec:
+      containers:
+      - name: polls-app
+        image: 891377347126.dkr.ecr.us-east-2.amazonaws.com/polls-app:latest
+        ports:
+        - containerPort: 8000
+        volumeMounts:
+        - name: polls-storage
+          mountPath: /data  # Change this path based on where you want to mount the volume inside the container
+      volumes:
+      - name: polls-storage
+        persistentVolumeClaim:
+          claimName: my-manual-pvc  # Ensure this matches the name of your PVC
+
