@@ -157,8 +157,8 @@ spec:
 
 Access the Application
 Access the Django App: Open your browser and navigate to:
-Polls page: http://<EC2-public-ip>:30001/
-Admin page: http://<EC2-public-ip>:30001/admin/
+Polls page: http://<EC2-public-ip address>:30001/
+Admin page: http://<EC2-public-ip address>:30001/admin/
 
 Prometheus
 ![image](https://github.com/user-attachments/assets/6646ddd5-febc-47bf-8f30-46faf5349343)
